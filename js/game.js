@@ -2,7 +2,7 @@
 var canvas = document.createElement("canvas");
 var ctx = canvas.getContext("2d");
 canvas.width = 512;
-canvas.height = 520;
+canvas.height = 540;
 document.body.appendChild(canvas);
 
 // Adding the background/object images
@@ -63,9 +63,9 @@ addEventListener("keyup", function (e) {
 var reset = function () {
 
     monster.x = 32 + (Math.random() * (canvas.width - 96));
-    monster.y = 32 + (Math.random() * (canvas.height - 96));
+    monster.y = 32 + (Math.random() * (canvas.height - 156));
 	scarecrow.x = 32 + (Math.random() * (canvas.width - 96));
-	scarecrow.y = 32 + (Math.random() * (canvas.height - 96));
+	scarecrow.y = 32 + (Math.random() * (canvas.height - 156));
 };
 
 var gameover = function () {
@@ -152,11 +152,11 @@ var render = function () {
     ctx.fillText(monstersCaught, 256, 32);
 
     ctx.fillStyle = "rgb(0, 0, 0)";
-    ctx.font = "small-caps 20px arial";
+    ctx.font = "small-caps 30px arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "bottom";
-    ctx.fillText("Defeat all the monsters!", 256, 500);
-    ctx.fillText("Beware of the scarecrows...", 256, 520);
+    ctx.fillText("Defeat all the monsters!", 256, 510);
+    ctx.fillText("Beware of the scarecrows...", 256, 530);
 };
 
 var main = function () {
